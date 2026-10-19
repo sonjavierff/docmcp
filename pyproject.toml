@@ -1,0 +1,28 @@
+[project]
+name = "docmcp"
+version = "0.1.0"
+description = "MCP server to generate documentation and manuals (md, txt, docx, odt) and fill templates"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mcp>=1.27",
+    "docxtpl>=0.20",
+    "python-docx>=1.1",
+    "odfpy>=1.4",
+    "lxml>=5.0",
+    "markdown-it-py>=3.0",
+    "jinja2>=3.1",
+]
+
+[project.scripts]
+docmcp = "docmcp:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.17.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.6,<0.12.0"]
+build-backend = "uv_build"
